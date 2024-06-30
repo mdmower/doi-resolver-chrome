@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["plugin:jest/recommended"],
+  "parserOptions": {
+    "project": "tests/tsconfig.json"
+  },
+  "rules": {
+    "jsdoc/require-jsdoc": "off"
+  }
+}

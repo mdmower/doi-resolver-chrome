@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["ES2022", "DOM"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "sourceMap": true,
+    "types": ["node", "jest", "chrome"]
+  },
+  "extends": "../tsconfig.json",
+  "include": ["**/*", "../src/lib/options.ts"],
+  "exclude": ["node_modules"]
+}

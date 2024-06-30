@@ -14,5 +14,5 @@
     "types": ["node", "chrome"]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.js"]
+  "exclude": ["node_modules"]
 }
