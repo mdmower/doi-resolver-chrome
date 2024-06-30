@@ -5,7 +5,8 @@
 import path from 'node:path';
 import purgecss from '@fullhuman/postcss-purgecss';
 import {Browser, dirRef} from './utils.js';
-import webpack, {Configuration} from 'webpack';
+import {Configuration} from 'webpack';
+import {EsbuildPlugin} from 'esbuild-loader';
 import HtmlBundlerPlugin from 'html-bundler-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 
@@ -44,7 +45,7 @@ export function getWebpackConfig(debug: boolean, browser: Browser): Configuratio
       rules: [
         {
           test: /\.ts$/,
-          use: 'ts-loader',
+          use: 'esbuild-loader',
           exclude: /node_modules/,
         },
         {
@@ -101,8 +102,10 @@ export function getWebpackConfig(debug: boolean, browser: Browser): Configuratio
       path: path.join(dirRef.dist, browser),
     },
     plugins: [
-      new webpack.DefinePlugin({
-        G_DOI_BROWSER: JSON.stringify(browser),
+      new EsbuildPlugin({
+        define: {
+          G_DOI_BROWSER: JSON.stringify(browser),
+        },
       }),
       new CopyPlugin({
         patterns: [

@@ -6,13 +6,14 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
+    "check-types": "tsc --noEmit --skipLibCheck",
     "format": "prettier --write .",
     "build": "tsx build/build.ts",
     "build-debug": "tsx build/build.ts --debug",
     "update-csl": "tsx build/update-csl.ts",
     "pkg": "tsx build/pkg.ts",
     "clean": "tsx build/clean.ts",
-    "release": "npm run lint && npm run clean && npm run build && npm run pkg"
+    "release": "npm run lint && npm run check-types && npm run clean && npm run build && npm run pkg"
   },
   "repository": "github:mdmower/doi-resolver",
   "keywords": [
@@ -51,6 +52,7 @@
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "deepmerge": "^4.3.1",
+    "esbuild-loader": "^4.2.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsdoc": "^48.5.0",
@@ -62,7 +64,6 @@
     "prettier": "^3.3.2",
     "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
-    "ts-loader": "^9.5.1",
     "tsx": "^4.15.7",
     "typescript": "~5.5.2",
     "webpack": "^5.92.1"
