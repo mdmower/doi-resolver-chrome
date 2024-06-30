@@ -2,7 +2,6 @@
  * @license Apache-2.0
  */
 
-import './css/notification.scss';
 import {logError} from './lib/logger';
 import {applyTheme} from './utils';
 

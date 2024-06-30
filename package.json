@@ -7,8 +7,8 @@
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write .",
-    "build": "tsx build/dist.ts",
-    "build-debug": "tsx build/dist.ts --debug",
+    "build": "tsx build/build.ts",
+    "build-debug": "tsx build/build.ts --debug",
     "update-csl": "tsx build/update-csl.ts",
     "pkg": "tsx build/pkg.ts",
     "clean": "tsx build/clean.ts",
@@ -39,8 +39,6 @@
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "@types/archiver": "^6.0.2",
     "@types/chrome": "^0.0.268",
-    "@types/fs-extra": "^11.0.4",
-    "@types/html-minifier-terser": "^7.0.2",
     "@types/minimist": "^1.2.5",
     "@types/node": "^20.14.9",
     "@types/sortablejs": "^1.15.8",
@@ -50,6 +48,7 @@
     "archiver": "^7.0.1",
     "clean-css": "^5.3.3",
     "colors": "^1.4.0",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "deepmerge": "^4.3.1",
     "eslint": "^8.57.0",
@@ -57,18 +56,15 @@
     "eslint-plugin-jsdoc": "^48.5.0",
     "eslint-plugin-prettier": "^5.1.3",
     "fast-deep-equal": "^3.1.3",
-    "fs-extra": "^11.2.0",
-    "html-minifier-terser": "^7.2.0",
+    "html-bundler-webpack-plugin": "^3.15.0",
     "minimist": "^1.2.8",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.3.2",
     "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
-    "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "tsx": "^4.15.7",
     "typescript": "~5.5.2",
-    "webpack": "^5.92.1",
-    "webpack-merge": "^5.10.0"
+    "webpack": "^5.92.1"
   }
 }

@@ -2,9 +2,6 @@
  * @license Apache-2.0
  */
 
-import './css/options.scss';
-import 'bootstrap/js/dist/tab';
-import 'bootstrap/js/dist/modal';
 import {
   HistoryDoi,
   StorageOptions,

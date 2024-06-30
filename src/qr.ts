@@ -2,8 +2,6 @@
  * @license Apache-2.0
  */
 
-import './css/qr.scss';
-import 'bootstrap/js/dist/modal';
 import {
   HistoryDoi,
   QrImageType,

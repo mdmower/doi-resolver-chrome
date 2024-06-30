@@ -2,8 +2,6 @@
  * @license Apache-2.0
  */
 
-import './css/citation.scss';
-import 'bootstrap/js/dist/modal';
 import {HistoryDoi, getDefaultOptions, getOptions, setOptions, StorageOptions} from './lib/options';
 import {requestCitationPermissions} from './lib/permissions';
 import {filterSelectByText, isRecord, isValidDoi, sortHistoryEntries, trimDoi} from './lib/utils';
